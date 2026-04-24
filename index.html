@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkyLover's Reservations</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>✈ SkyLover's</h1>
+<h2>Reserve Flights & Pre-Book Meals</h2>
+<nav>
+<a href="#booking">Flights</a>
+<a href="#food">Food</a>
+<a href="AboutUs.html">AboutUs</a>
+<a href="#" onclick="openModal('loginModal')">Login</a>
+<a href="#" onclick="openModal('signupModal')">Sign Up</a>
+</nav>
+</header>
+<section class="hero">
+<h1>Reserve Flights & Pre-Book Meals</h1>
+<p>One place for tickets and in-flight dining.</p>
+</section>
+<section class="intro">
+    <h1 style="text-align:center;">Welcome to SkyLover's</h1>
+    <p>
+        SkyLover's offers a simple and convenient way to book flights and enjoy fresh meals during your journey. 
+        We make travel easier by providing smooth flight reservations with multiple seating options, flexible dates, 
+        and affordable prices. Passengers can also pre-order delicious in-flight meals from our special menu, 
+        ensuring comfort and satisfaction while flying. Whether you are traveling for business or vacation, 
+        SkyBite helps save time and improves your travel experience. Our goal is to combine comfort, convenience, 
+        and quality service in one platform, making every trip enjoyable, stress-free, and memorable.
+    </p>
+</section>
+<section id="booking">
+<div class="container">
+<div class="card">
+<h3>Flight Reservation</h3>
+<input id="from" placeholder="From City">
+<input id="to" placeholder="To City">
+<input id="date" type="date">
+<select id="classType"><option>Economy</option><option>Business</option><option>First Class</option></select>
+<button onclick="bookFlight()">Book Flight</button>
+</div>
+<div class="card" id="food">
+<h3>In-Flight Food Booking</h3>
+<div class="menu">
+<div class="food"><p>Veg Meal</p><button onclick="bookFood('Veg Meal')">Order</button></div>
+<div class="food"><p>Chicken Meal</p><button onclick="bookFood('Chicken Meal')">Order</button></div>
+<div class="food"><p>Pasta</p><button onclick="bookFood('Pasta')">Order</button></div>
+<div class="food"><p>Coffee</p><button onclick="bookFood('Coffee')">Order</button></div>
+</div>
+</div>
+</div>
+</section>
+<div class="modal" id="loginModal"><div class="modal-content"><span class="close" onclick="closeModal('loginModal')">&times;</span><h3>Login</h3><input placeholder="Email"><input type="password" placeholder="Password"><button onclick="showMsg('Login successful!')">Login</button></div></div>
+<div class="modal" id="signupModal"><div class="modal-content"><span class="close" onclick="closeModal('signupModal')">&times;</span><h3>Sign Up</h3><input placeholder="Full Name"><input placeholder="Email"><input type="password" placeholder="Password"><button onclick="showMsg('Account created successfully!')">Create Account</button></div></div>
+<footer>© 2026 SkyLover's Reservations</footer>
+<script src="script.js"></script>
+</body>
+</html>
